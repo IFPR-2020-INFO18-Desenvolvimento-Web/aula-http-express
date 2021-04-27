@@ -14,6 +14,9 @@ module.exports = (titulo, conteudo) => `
         <a href="/">Home</a>
       </li>
       <li>
+        <a href="/login">Login</a>
+      </li>
+      <li>
         <a href="/formularioIdade">Calcular Idade [GET]</a>
       </li>
       <li>
