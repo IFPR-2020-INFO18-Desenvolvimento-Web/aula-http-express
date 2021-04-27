@@ -5,10 +5,12 @@ const formularioIdade = require('./paginas/formularioIdade');
 
 const app = express();
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
 
 app.get('/', index);
-app.get('/calcularIdade', calcularIdade);
 app.get('/formularioIdade', formularioIdade);
+app.get('/calcularIdade', calcularIdade);
+app.post('/calcularIdade', calcularIdade);
 
 const port = 5000;
 app.listen(port, () => {

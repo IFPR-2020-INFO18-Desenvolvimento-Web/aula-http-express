@@ -1,10 +1,12 @@
 const template = require('./template');
 
 module.exports = (req, res) => {
+  const method = req.query.method === 'post' ? 'post' : 'get';
+
   const html = template(
     'Calcule a sua Idade',
     `
-      <form action="/calcularIdade" method="get">
+      <form action="/calcularIdade" method="${method}">
         <div>
           <label for="nome">Nome</label>
           <input type="text" name="nome" id="nome">

@@ -14,7 +14,10 @@ module.exports = (titulo, conteudo) => `
         <a href="/">Home</a>
       </li>
       <li>
-        <a href="/formularioIdade">Calcular Idade</a>
+        <a href="/formularioIdade">Calcular Idade [GET]</a>
+      </li>
+      <li>
+        <a href="/formularioIdade?method=post">Calcular Idade [POST]</a>
       </li>
     </ul>
     <h1>${titulo}</h1>

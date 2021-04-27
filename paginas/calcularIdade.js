@@ -1,11 +1,13 @@
 const template = require('./template');
 
 module.exports = (req, res) => {
-  const idade = parseInt(req.query.idade, 10);
-  const anos = parseInt(req.query.anos, 10);
+  const params = req.method === 'GET' ? req.query : req.body;
+
+  const idade = parseInt(params.idade, 10);
+  const anos = parseInt(params.anos, 10);
   const idadeCalculada = idade + anos;
-  // let nome = req.query.nome;
-  let { nome } = req.query;
+  // let nome = params.nome;
+  let { nome } = params;
   if (!nome || nome === '') {
     nome = 'anônimo';
   }
