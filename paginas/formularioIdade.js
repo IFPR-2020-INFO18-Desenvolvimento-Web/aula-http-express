@@ -6,6 +6,10 @@ module.exports = (req, res) => {
     `
       <form action="/calcularIdade" method="get">
         <div>
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome">
+        </div>
+        <div>
           <label for="idade">Sua idade Atual</label>
           <input type="number" name="idade" id="idade">
         </div>
